@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+	<session-factory>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="dialect">org.hibernate.dialect.SQLiteDialect</property>
+		<property name="connection.driver_class">org.sqlite.JDBC</property>
+		<property name="connection.url">jdbc:sqlite:net.craswell.common.persistence.db</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<mapping package="net.craswell.common.models" />
+		<mapping class="net.craswell.common.models.Model" />
+		<mapping class="net.craswell.common.models.ConfigurationItem" />
+		
+		<mapping package="net.craswell.security.models" />
+		<mapping class="net.craswell.security.models.CertificateRequest" />
+		<mapping class="net.craswell.security.models.Certificate" />
+	</session-factory>
+</hibernate-configuration>
