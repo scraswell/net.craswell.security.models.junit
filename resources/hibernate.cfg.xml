@@ -8,12 +8,8 @@
 		<property name="connection.url">jdbc:sqlite:net.craswell.common.persistence.db</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
 
-		<mapping package="net.craswell.common.models" />
+		<mapping package="net.craswell.common.models.junit" />
 		<mapping class="net.craswell.common.models.Model" />
-		<mapping class="net.craswell.common.models.ConfigurationItem" />
-		
-		<mapping package="net.craswell.security.models" />
-		<mapping class="net.craswell.security.models.CertificateRequest" />
-		<mapping class="net.craswell.security.models.Certificate" />
+		<mapping class="net.craswell.security.models.generated.ConfigurationItemSecured" />
 	</session-factory>
 </hibernate-configuration>

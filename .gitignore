@@ -38,3 +38,5 @@ build/
 bin/
 gradlew
 gradlew.bat
+
+*.db

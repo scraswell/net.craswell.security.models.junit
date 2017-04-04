@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
 
 repositories {
     jcenter()
@@ -8,6 +9,8 @@ repositories {
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.21'
     testCompile 'junit:junit:4.12'
+    
+    compile 'com.squareup:javapoet:1.8.0'
 
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-core
 	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.8.Final'
@@ -15,7 +18,11 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
 	compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.16.1'
 	
-	// https://mvnrepository.com/artifact/org.hibernate.dialect/sqlite-dialect
-	compile: 'org.hibernate.dialect:sqlite-dialect:0.1.0'
-
+	compile project(':net.craswell.common')
+    compile project(':net.craswell.common.models')
+    compile project(':net.craswell.common.codegen')
+    compile project(':net.craswell.common.persistence')
+    compile project(':net.craswell.security.models')
+    compile project(':net.craswell.security.annotations')
+    compile project(':org.hibernate.dialect.sqlite')
 }
